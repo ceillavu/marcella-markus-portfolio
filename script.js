@@ -1,21 +1,34 @@
 (function () {
     "use strict";
 
-    /* 1. Dark Mode Toggle with LocalStorage */
+    /* 1. Dark Mode Toggle with LocalStorage & Logo Swapping */
     function initTheme() {
         const btn = document.getElementById("theme-toggle");
         const icon = document.getElementById("theme-icon");
         const label = document.getElementById("theme-label");
+        const logoImg = document.querySelector(".brand-logo-img");
+        if (!btn) return;
+
         const saved = localStorage.getItem("portfolio_theme");
 
         function apply(dark) {
             document.body.classList.toggle("dark-mode", dark);
             btn.setAttribute("aria-pressed", String(dark));
-            icon.textContent = dark ? "☀️" : "🌙";
-            label.textContent = dark ? "Light" : "Dark";
+            if (icon) icon.textContent = dark ? "☀️" : "🌙";
+            if (label) label.textContent = dark ? "Light" : "Dark";
+            if (logoImg) {
+                logoImg.src = dark ? "logo-dark.png" : "logo.png";
+            }
         }
 
-        if (saved === "dark") apply(true);
+        // Check if dark was previously saved, or check system preference
+        if (saved === "dark") {
+            apply(true);
+        } else if (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            apply(true);
+        } else {
+            apply(false);
+        }
 
         btn.addEventListener("click", () => {
             const isDark = !document.body.classList.contains("dark-mode");
@@ -34,21 +47,19 @@
         menuBtn.addEventListener("click", () => {
             const open = nav.classList.toggle("mobile-open");
             menuBtn.setAttribute("aria-expanded", String(open));
-            menuBtn.textContent = open ? "Close ✕" : "Menu ☰";
         });
 
         links.forEach(l => l.addEventListener("click", () => {
             nav.classList.remove("mobile-open");
             menuBtn.setAttribute("aria-expanded", "false");
-            menuBtn.textContent = "Menu ☰";
         }));
     }
 
-    /* 3. Interactive Story Cards (Flip to Read Story) */
+    /* 3. Interactive Story Cards (Flip to Read Story / Case Study) */
     function initStoryCards() {
         const readBtns = document.querySelectorAll(".read-story-btn");
         const backBtns = document.querySelectorAll(".story-back-btn");
-        const ghBtns = document.querySelectorAll(".card-github-btn, .story-cta-live, .story-cta-repo");
+        const interactiveLinks = document.querySelectorAll(".card-icon-link, .story-cta-live, .story-cta-repo, .card-links a");
 
         readBtns.forEach(btn => {
             btn.addEventListener("click", (e) => {
@@ -78,9 +89,8 @@
             });
         });
 
-        ghBtns.forEach(link => {
+        interactiveLinks.forEach(link => {
             link.addEventListener("click", (e) => {
-                // Ensure external navigation doesn't trigger card flips
                 e.stopPropagation();
             });
         });
@@ -119,7 +129,7 @@
                     });
                 }
 
-                // If any cards are flipped when filtering, gently unflip them
+                // Unflip any flipped cards when filter changes
                 cards.forEach(c => {
                     const inner = c.querySelector(".story-card");
                     if (inner) inner.classList.remove("is-flipped");
@@ -134,10 +144,10 @@
                 const isExpanded = grid.classList.toggle("show-all");
                 moreBtn.setAttribute("aria-expanded", String(isExpanded));
                 if (btnText) {
-                    btnText.textContent = isExpanded ? "Show Less" : "Show More Projects (3 more)";
+                    btnText.textContent = isExpanded ? "Show Less Works" : "Show More Projects (3 more)";
                 }
 
-                // Ensure "All Stories" tab is active if user toggled expand
+                // If expanded, set "All Projects" tab active
                 const allTab = document.querySelector('.filter-tab[data-filter="all"]');
                 if (allTab && !allTab.classList.contains("active")) {
                     filterBtns.forEach(b => b.classList.remove("active"));
@@ -149,7 +159,7 @@
         }
     }
 
-    /* 5. Modal Case Study Dialog (Fallback Support) */
+    /* 5. Accessible Modal Case Study Dialog (Fallback Support) */
     function initModal() {
         const modal = document.getElementById("project-modal");
         const title = document.getElementById("modal-title");
@@ -164,9 +174,9 @@
         openBtns.forEach(btn => {
             btn.addEventListener("click", () => {
                 lastFocus = btn;
-                title.textContent = btn.getAttribute("data-title");
-                tech.textContent = "Tech: " + btn.getAttribute("data-tech");
-                desc.textContent = btn.getAttribute("data-desc");
+                title.textContent = btn.getAttribute("data-title") || "";
+                tech.textContent = "Tech: " + (btn.getAttribute("data-tech") || "");
+                desc.textContent = btn.getAttribute("data-desc") || "";
                 modal.classList.add("open");
                 modal.setAttribute("aria-hidden", "false");
                 if (closeBtn) closeBtn.focus();
@@ -207,10 +217,11 @@
         }
     }
 
-    /* 7. Copy Email Handler */
+    /* 7. Copy Email Handler with Visual Feedback */
     function initCopy() {
         const btn = document.getElementById("copy-email-btn");
         if (!btn) return;
+        const textSpan = document.getElementById("copy-btn-text") || btn;
         const email = "marcellamarkus03@gmail.com";
 
         btn.addEventListener("click", async () => {
@@ -225,9 +236,13 @@
                     document.execCommand("copy");
                     document.body.removeChild(t);
                 }
-                const orig = btn.textContent;
-                btn.textContent = "✓ Copied to Clipboard";
-                setTimeout(() => { btn.textContent = orig; }, 2200);
+                const orig = textSpan.textContent;
+                textSpan.textContent = "✓ Copied!";
+                btn.style.borderColor = "var(--accent-dot)";
+                setTimeout(() => { 
+                    textSpan.textContent = orig;
+                    btn.style.borderColor = "";
+                }, 2200);
             } catch (err) {
                 console.error("Copy failed", err);
             }

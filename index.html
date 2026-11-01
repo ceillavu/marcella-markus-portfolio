@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcella Markus — Network Computing &amp; Digital Creator</title>
-    <meta name="description" content="Personal portfolio of Marcella Markus — Network Computing student at FCSIT UNIMAS and digital creator.">
+    <meta name="description" content="Personal portfolio of Marcella Markus — Network Computing student at FCSIT UNIMAS and digital creator. Minimalist layout inspired by Behance &amp; Wix Studio.">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,9 +14,9 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ==========================================================================
-         NAVIGATION BAR
+         NAVIGATION BAR (Minimalist Wix Studio Floating Bar)
          ========================================================================== -->
-    <header class="site-header">
+    <header class="site-header" id="site-header">
         <div class="container navbar">
             <a href="#hero" class="brand-logo" aria-label="Marcella Markus — Return to top">
                 <img src="logo.png" alt="Marcella." class="brand-logo-img">
@@ -41,7 +38,8 @@
                     <span id="theme-label">Dark</span>
                 </button>
                 <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-                    Menu ☰
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
                 </button>
             </div>
         </div>
@@ -49,89 +47,105 @@
 
     <main id="main-content">
         <!-- ==========================================================================
-             1. HERO SECTION (Quiet, Confident Editorial Lead)
+             1. HERO SECTION (Minimalist Wix / Behance Editorial Showcase)
              ========================================================================== -->
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
+                
+                <!-- Left Editorial Introduction -->
                 <div class="hero-intro">
-                    <p class="hero-kicker">Network Computing · FCSIT, Universiti Malaysia Sarawak</p>
-                    
+                    <div class="hero-status-pill">
+                        <span class="cat-emoji" aria-hidden="true">🐱</span>
+                        <span class="status-text">Network Computing &middot; FCSIT UNIMAS</span>
+                    </div>
+
                     <h1 class="hero-title">
-                        Curious about how things <em>connect</em>.
+                        Designing systems, securing data, and connecting digital ideas.
                     </h1>
 
                     <p class="hero-lead">
-                        I'm Marcella, a Network Computing student at UNIMAS interested in the systems that keep our digital world running.
+                        I'm Marcella, a Network Computing undergraduate at Universiti Malaysia Sarawak. I focus on computer networking, infrastructure security, and applied software systems.
                     </p>
 
                     <p class="hero-desc">
-                        I explore computer networks, cloud computing, security and applied AI through projects and hands-on learning. Outside technology, I enjoy reading, creating content and discovering new things.
+                        I balance technical systems engineering with creative storytelling, sharing lifestyle &amp; reading on TikTok (<a href="https://www.tiktok.com/@cellanotes" target="_blank" rel="noopener noreferrer">@cellanotes</a>) and makeup &amp; tech shares on Shopee.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="#projects" class="btn">Explore Projects (5)</a>
-                        <a href="#contact" class="btn-link">Get in touch &rarr;</a>
+                        <a href="#projects" class="btn btn-primary">Selected Projects &darr;</a>
+                        <a href="#contact" class="btn btn-outline">Get in Touch &rarr;</a>
+                    </div>
+
+                    <div class="hero-social-strip">
+                        <span class="social-label">Connect:</span>
+                        <a href="https://github.com/ceillavu" target="_blank" rel="noopener noreferrer" class="hero-social-link">GitHub ↗</a>
+                        <a href="https://www.tiktok.com/@cellanotes" target="_blank" rel="noopener noreferrer" class="hero-social-link">TikTok ↗</a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="hero-social-link">LinkedIn ↗</a>
                     </div>
                 </div>
 
-                <!-- Coherent Engineering Notebook & Featured Project Panel -->
-                <aside class="hero-notebook-panel" aria-label="Selected Project and Engineering Notes">
-                    <div class="notebook-header">
-                        <span class="notebook-kicker">CURRENT FOCUS &middot; 2026</span>
+                <!-- Right Behance-Style Featured Spotlight Panel -->
+                <aside class="hero-spotlight-card" aria-label="Active Project Spotlight">
+                    <div class="spotlight-header">
+                        <span class="spotlight-tag">ACTIVE FOCUS &middot; 2026</span>
+                        <span class="spotlight-badge">In Progress</span>
                     </div>
 
-                    <div class="notebook-visual">
+                    <div class="spotlight-media">
                         <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" 
                              alt="SkinBloom personalized skincare routine and ingredient analyzer concept" 
-                             class="notebook-image">
-                        <div class="notebook-caption">
-                            <span class="caption-tag">Active Project &middot; In Progress</span>
-                            <span class="caption-name">SkinBloom</span>
+                             class="spotlight-img">
+                        <div class="spotlight-overlay">
+                            <span class="spotlight-title">SkinBloom</span>
+                            <span class="spotlight-sub">Skincare Routine &amp; Ingredient Conflict Analyzer</span>
                         </div>
                     </div>
 
-                    <div class="notebook-details">
-                        <div class="detail-row">
-                            <span class="detail-label">Active Build</span>
-                            <span class="detail-text"><strong>SkinBloom</strong> &mdash; Skincare routine &amp; cosmetic ingredient conflict analyzer.</span>
+                    <div class="spotlight-details">
+                        <div class="spotlight-row">
+                            <span class="row-label">Academic Track</span>
+                            <span class="row-value">B.Sc. Computer Science (Network Computing)</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Exploration</span>
-                            <span class="detail-text">Computer networks, cloud infrastructure &amp; secure web systems.</span>
+                        <div class="spotlight-row">
+                            <span class="row-label">Key Competencies</span>
+                            <span class="row-value">Network Routing, WebSockets, System Security</span>
                         </div>
-                        <div class="detail-row">
-                            <span class="detail-label">Personal</span>
-                            <span class="detail-text">Reading fiction and sharing lifestyle curation on TikTok &amp; Shopee (<a href="https://www.tiktok.com/@cellanotes" target="_blank" rel="noopener noreferrer">@cellanotes</a>).</span>
+                        <div class="spotlight-row">
+                            <span class="row-label">Creative Channel</span>
+                            <span class="row-value"><strong>@cellanotes</strong> &mdash; Lifestyle &amp; reading &middot; Shopee</span>
                         </div>
                     </div>
                 </aside>
+
             </div>
         </section>
 
         <!-- ==========================================================================
-             2. MY PROJECTS (Editorial Curation)
+             2. SELECTED PROJECTS (Behance Exhibition Grid & Interactive Stories)
              ========================================================================== -->
         <section id="projects" class="projects-section">
             <div class="container">
+                
                 <header class="projects-header">
                     <div class="projects-header-info">
-                        <h2 class="section-title">My Projects, <span class="title-serif">told as stories.</span></h2>
+                        <span class="section-kicker">01 / PORTFOLIO</span>
+                        <h2 class="section-title">Selected Projects</h2>
                         <p class="section-sub">
-                            Projects I did during my bachelor's and side project I did outside of UNIMAS to showcase that I implement some fundamental knowledge into these systems. I also collaborated with colleagues who are skilled in their own expertise.
+                            Academic coursework, system architectures, and exploratory side projects demonstrating hands-on technical problem solving, teamwork, and user-centric design.
                         </p>
                     </div>
 
-                    <!-- Clean Minimalist Category Filters -->
+                    <!-- Minimalist Wix Filter Tabs -->
                     <nav class="filter-nav" role="group" aria-label="Filter projects by discipline">
-                        <button type="button" class="filter-tab active" data-filter="all">All Stories</button>
+                        <button type="button" class="filter-tab active" data-filter="all">All Projects</button>
                         <button type="button" class="filter-tab" data-filter="uiux">UI/UX Design</button>
                         <button type="button" class="filter-tab" data-filter="software">Programming</button>
                         <button type="button" class="filter-tab" data-filter="security">Security &amp; AI</button>
-                        <button type="button" class="filter-tab" data-filter="more">More</button>
+                        <button type="button" class="filter-tab" data-filter="more">More Works</button>
                     </nav>
                 </header>
 
-                <!-- Stories Grid: Clean 3-Column Cards with Real Photos & Interactive Flip -->
+                <!-- Stories Grid: Clean 3-Column Behance Cards with Interactive 3D Story Flip -->
                 <div class="stories-grid" id="projects-grid">
                     
                     <!-- 1. KESTRA EV Dashboard Interface -->
@@ -139,33 +153,20 @@
                         <div class="story-card">
                             <!-- FRONT -->
                             <div class="story-card-face story-card-front">
-                                <span class="card-tape tape-rose" aria-hidden="true"></span>
                                 <div class="card-banner">
                                     <img src="kestra-ev.png" 
                                          alt="KESTRA EV digital cockpit touchscreen interface showing battery levels, speed, and climate" 
                                          class="banner-img">
-                                    <div class="banner-overlay">
-                                        <div class="banner-top-row">
-                                            <span class="card-pill">UI/UX · Coursework</span>
-                                            <span class="card-year">2026</span>
-                                        </div>
-                                        <div class="banner-bottom-row">
-                                            <div class="banner-icon-badge" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect>
-                                                    <line x1="22" y1="11" x2="22" y2="13"></line>
-                                                    <line x1="6" y1="12" x2="10" y2="12"></line>
-                                                    <line x1="8" y1="10" x2="8" y2="14"></line>
-                                                </svg>
-                                            </div>
-                                            <h3 class="banner-project-title">Kestra EV Interface</h3>
-                                        </div>
+                                    <div class="banner-badges">
+                                        <span class="card-pill">UI/UX &middot; Coursework</span>
+                                        <span class="card-year">2026</span>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-headline">EV Dashboard Redesign: For Sarawak Pan Borneo Usage</h4>
+                                    <h3 class="card-title">Kestra EV Interface</h3>
+                                    <h4 class="card-headline">EV Dashboard Redesign for Sarawak Pan Borneo Drivers</h4>
                                     <p class="card-desc">
-                                        Redesigned EV dashboard interface tailored for long-distance drivers along the Sarawak Pan Borneo Highway, focusing on real-time battery analytics and charging station accessibility.
+                                        Tailored for electric vehicle drivers traversing long distances on the Pan Borneo Highway, featuring real-time battery analytics, glare-resistant dark mode, and charging accessibility.
                                     </p>
                                     <div class="card-tags">
                                         <span class="tag">Figma</span>
@@ -174,14 +175,17 @@
                                         <span class="tag">Vanilla JS</span>
                                     </div>
                                     <div class="card-actions">
-                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read story for Kestra EV Interface">
-                                            Read Story &rarr;
+                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read case study for Kestra EV Interface">
+                                            Read Case Study &rarr;
                                         </button>
-                                        <a href="https://github.com/ceillavu/kestra-ev-dashboard" target="_blank" rel="noopener noreferrer" class="card-github-btn" aria-label="View Kestra EV on GitHub" title="View GitHub Repository">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                            </svg>
-                                        </a>
+                                        <div class="card-links">
+                                            <a href="https://ceillavu.github.io/kestra-ev-dashboard/" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="Live Demo" aria-label="Live Demo">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                            </a>
+                                            <a href="https://github.com/ceillavu/kestra-ev-dashboard" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="GitHub Repository" aria-label="GitHub Repository">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -189,50 +193,42 @@
                             <!-- BACK / STORY -->
                             <div class="story-card-face story-card-back">
                                 <div class="story-header">
-                                    <span class="story-kicker">01 / PROJECT STORY</span>
+                                    <span class="story-kicker">01 / CASE STUDY</span>
                                     <button type="button" class="story-back-btn" aria-label="Close story and return to front">
-                                        <span aria-hidden="true">&larr;</span> Back
+                                        &larr; Back
                                     </button>
                                 </div>
                                 <div class="story-content">
                                     <h4 class="story-title">Kestra EV Dashboard</h4>
                                     <p class="story-lead">
-                                        It’s a custom dashboard app made for Electric Vehicle (EV) drivers traveling along the long, empty stretches of the Sarawak Pan Borneo Highway—where finding a charging station can be pretty tough.
+                                        A custom digital cockpit designed for electric vehicle drivers traveling along remote stretches of the Sarawak Pan Borneo Highway, where charging infrastructure is sparse.
                                     </p>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Thinking &amp; Architecture</h5>
+                                        <h5 class="story-heading">Architecture &amp; Thinking</h5>
                                         <ul class="story-list">
-                                            <li><strong>Real-time live updates:</strong> Instead of waiting for the screen to refresh, live data (like battery speed, charge, and temperature) flows onto the screen instantly using connection tools (WebSockets and HTML5 Canvas).</li>
-                                            <li><strong>Visuals built for night driving:</strong> The dials and buttons are designed with high contrast (dark mode) so they are super easy to read at a glance without blinding the driver during daytime drive or distracting them at night.</li>
+                                            <li><strong>Real-time telemetry:</strong> Telemetry streams (battery state, charge rate, cabin temperature) render instantly with low overhead via WebSockets and HTML5 Canvas.</li>
+                                            <li><strong>Night driving ergonomics:</strong> High-contrast palette calibrated to prevent glare during evening drives while maintaining readability in strong tropical sun.</li>
                                         </ul>
                                     </div>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Collaborations</h5>
-                                        <ul class="story-list">
-                                            <li><strong>Teamwork:</strong> I worked with 10 members of my classmates in a group to double-check the reports and findings were correct and made sure the dashboard animations ran smoothly without lagging.</li>
-                                            <li><strong>The Result:</strong> Built smooth, reliable dashboard animations that give drivers vital essentials:
-                                                <ul class="story-sublist">
-                                                    <li>An accurate estimate of how much battery/range they have left so they do not get stranded.</li>
-                                                    <li>Clear directions to the nearest available EV chargers.</li>
-                                                    <li>Anti-blinding or glare protection when driving along the Pan Borneo highways while glancing at the dashboard.</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="story-block">
-                                        <h5 class="story-heading">Outcomes</h5>
+                                        <h5 class="story-heading">Team Collaboration</h5>
                                         <p class="story-text">
-                                            I helped oversee the report and findings because I was in charge of making sure my team members equally did their parts in helping make this interface possible. With their contribution, I was able to work on the mock designs and later ask my team members to refine it.
+                                            Collaborated with 10 classmates to ensure interface usability, test dashboard animations across resolutions, and verify range estimation algorithms.
+                                        </p>
+                                    </div>
+                                    <div class="story-block">
+                                        <h5 class="story-heading">Key Outcomes</h5>
+                                        <p class="story-text">
+                                            Led mock design iterations, synthesized team feedback, and produced a responsive interface with real-time route charging guidance.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="story-footer">
                                     <a href="https://ceillavu.github.io/kestra-ev-dashboard/" target="_blank" rel="noopener noreferrer" class="story-cta-live">
-                                        View Live Demo &nearr;
+                                        Live Demo ↗
                                     </a>
                                     <a href="https://github.com/ceillavu/kestra-ev-dashboard" target="_blank" rel="noopener noreferrer" class="story-cta-repo">
-                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                                        GitHub Repo
+                                        GitHub ↗
                                     </a>
                                 </div>
                             </div>
@@ -244,31 +240,20 @@
                         <div class="story-card">
                             <!-- FRONT -->
                             <div class="story-card-face story-card-front">
-                                <span class="card-tape tape-sage" aria-hidden="true"></span>
                                 <div class="card-banner">
                                     <img src="java-sdg-quiz.png" 
                                          alt="Energy Hero - Java SDG 7 Sustainable Energy Learning application" 
                                          class="banner-img">
-                                    <div class="banner-overlay">
-                                        <div class="banner-top-row">
-                                            <span class="card-pill">Java · Coursework</span>
-                                            <span class="card-year">2026</span>
-                                        </div>
-                                        <div class="banner-bottom-row">
-                                            <div class="banner-icon-badge" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                                                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-                                                </svg>
-                                            </div>
-                                            <h3 class="banner-project-title">EcoEnergy Java App</h3>
-                                        </div>
+                                    <div class="banner-badges">
+                                        <span class="card-pill">Java &middot; Coursework</span>
+                                        <span class="card-year">2026</span>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-headline">Renewable Energy Educational Application</h4>
+                                    <h3 class="card-title">EcoEnergy Java App</h3>
+                                    <h4 class="card-headline">Renewable Energy Educational &amp; Quiz Platform</h4>
                                     <p class="card-desc">
-                                        Java-based educational application promoting renewable energy awareness. Features interactive energy efficiency calculators and solar/hydro simulation modules.
+                                        Desktop learning application built in Java promoting clean energy awareness (UN SDG 7) with dynamic quiz modules, interactive calculators, and persistent score tracking.
                                     </p>
                                     <div class="card-tags">
                                         <span class="tag">Java</span>
@@ -277,14 +262,17 @@
                                         <span class="tag">MVC</span>
                                     </div>
                                     <div class="card-actions">
-                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read story for EcoEnergy Java App">
-                                            Read Story &rarr;
+                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read case study for EcoEnergy Java App">
+                                            Read Case Study &rarr;
                                         </button>
-                                        <a href="https://github.com/ceillavu/energy-hero-SDG-7" target="_blank" rel="noopener noreferrer" class="card-github-btn" aria-label="View EcoEnergy on GitHub" title="View GitHub Repository">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                            </svg>
-                                        </a>
+                                        <div class="card-links">
+                                            <a href="https://ceillavu.github.io/energy-hero-SDG-7/" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="Live Demo" aria-label="Live Demo">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                            </a>
+                                            <a href="https://github.com/ceillavu/energy-hero-SDG-7" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="GitHub Repository" aria-label="GitHub Repository">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -292,45 +280,43 @@
                             <!-- BACK / STORY -->
                             <div class="story-card-face story-card-back">
                                 <div class="story-header">
-                                    <span class="story-kicker">02 / PROJECT STORY</span>
+                                    <span class="story-kicker">02 / CASE STUDY</span>
                                     <button type="button" class="story-back-btn" aria-label="Close story and return to front">
-                                        <span aria-hidden="true">&larr;</span> Back
+                                        &larr; Back
                                     </button>
                                 </div>
                                 <div class="story-content">
                                     <h4 class="story-title">EcoEnergy Quiz App</h4>
                                     <p class="story-lead">
-                                        It’s a Java assignment project designed to teach people about clean and affordable energy (SDG 7) through a fun, game-like quiz or learning app.
+                                        Java object-oriented software engineered to educate university peers on United Nations Sustainable Development Goal 7 (Affordable and Clean Energy).
                                     </p>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Thinking &amp; Architecture</h5>
+                                        <h5 class="story-heading">Architecture &amp; Thinking</h5>
                                         <ul class="story-list">
-                                            <li><strong>Clean code organization with AI-assisted tools:</strong> Used standard programming best practices (OOP and data structures) to keep the app's internal logic cleanly separated from what actually shows up on the screen, which makes the code much easier to manage.</li>
-                                            <li><strong>Game mechanics:</strong> Built repeatable game rounds with random questions.</li>
-                                            <li><strong>Saving scores:</strong> Used file storage (JSON) to save player scores so they do not get wiped out every time you close the app.</li>
+                                            <li><strong>MVC Pattern:</strong> Decoupled UI presentation from business logic using JavaFX and custom event listeners.</li>
+                                            <li><strong>Fault tolerance:</strong> Implemented robust exception handling to prevent runtime crashes during unexpected inputs.</li>
+                                            <li><strong>Persistence:</strong> Saved user performance history locally using structured JSON file serialization.</li>
                                         </ul>
                                     </div>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Collaborations</h5>
-                                        <ul class="story-list">
-                                            <li><strong>Teamwork:</strong> Worked with 3 of my classmates to double-check that math/facts about clean energy were accurate and added smooth animations to make the app fun to use.</li>
-                                            <li><strong>Bulletproof code:</strong> Added error-catching (exception handling) so the app won't randomly crash if a user inputs something weird.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="story-block">
-                                        <h5 class="story-heading">Outcomes</h5>
+                                        <h5 class="story-heading">Team Collaboration</h5>
                                         <p class="story-text">
-                                            I built the skeleton part of this quiz app such as <code>MainGUI.java</code>, <code>UIHandler.java</code>, and <code>EnergyHeroException.java</code>.
+                                            Worked alongside 3 teammates to verify renewable energy calculation models and implement fluid interface transitions.
+                                        </p>
+                                    </div>
+                                    <div class="story-block">
+                                        <h5 class="story-heading">Key Outcomes</h5>
+                                        <p class="story-text">
+                                            Authored core architectural classes including <code>MainGUI.java</code>, <code>UIHandler.java</code>, and <code>EnergyHeroException.java</code>.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="story-footer">
                                     <a href="https://ceillavu.github.io/energy-hero-SDG-7/" target="_blank" rel="noopener noreferrer" class="story-cta-live">
-                                        View Live Demo &nearr;
+                                        Live Demo ↗
                                     </a>
                                     <a href="https://github.com/ceillavu/energy-hero-SDG-7" target="_blank" rel="noopener noreferrer" class="story-cta-repo">
-                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                                        GitHub Repo
+                                        GitHub ↗
                                     </a>
                                 </div>
                             </div>
@@ -342,31 +328,20 @@
                         <div class="story-card">
                             <!-- FRONT -->
                             <div class="story-card-face story-card-front">
-                                <span class="card-tape tape-slate" aria-hidden="true"></span>
                                 <div class="card-banner">
                                     <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80" 
                                          alt="Cybersecurity code and encryption algorithms on screen" 
                                          class="banner-img">
-                                    <div class="banner-overlay">
-                                        <div class="banner-top-row">
-                                            <span class="card-pill">Security · Prototype</span>
-                                            <span class="card-year">2026</span>
-                                        </div>
-                                        <div class="banner-bottom-row">
-                                            <div class="banner-icon-badge" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                                </svg>
-                                            </div>
-                                            <h3 class="banner-project-title">MFA Authenticator</h3>
-                                        </div>
+                                    <div class="banner-badges">
+                                        <span class="card-pill">Security &middot; Prototype</span>
+                                        <span class="card-year">2026</span>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-headline">Client-Side Multi-Factor Authentication Prototype</h4>
+                                    <h3 class="card-title">MFA Authenticator</h3>
+                                    <h4 class="card-headline">Client-Side Multi-Factor Cryptographic Authenticator</h4>
                                     <p class="card-desc">
-                                        A lightweight authenticator exploring RFC 6238 time-based one-time passwords (TOTP) using the browser's native Web Crypto API for secure HMAC-SHA256 computations without server dependencies.
+                                        A lightweight zero-dependency authenticator exploring RFC 6238 time-based one-time passwords (TOTP) with native browser Web Crypto API and isolated cryptographic vaults.
                                     </p>
                                     <div class="card-tags">
                                         <span class="tag">Web Crypto</span>
@@ -375,14 +350,14 @@
                                         <span class="tag">Vanilla JS</span>
                                     </div>
                                     <div class="card-actions">
-                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read story for MFA Authenticator">
-                                            Read Story &rarr;
+                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read case study for MFA Authenticator">
+                                            Read Case Study &rarr;
                                         </button>
-                                        <a href="https://github.com/ceillavu/ai-mfa-security-system" target="_blank" rel="noopener noreferrer" class="card-github-btn" aria-label="View MFA Authenticator on GitHub" title="View GitHub Repository">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                            </svg>
-                                        </a>
+                                        <div class="card-links">
+                                            <a href="https://github.com/ceillavu/ai-mfa-security-system" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="GitHub Repository" aria-label="GitHub Repository">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -390,32 +365,32 @@
                             <!-- BACK / STORY -->
                             <div class="story-card-face story-card-back">
                                 <div class="story-header">
-                                    <span class="story-kicker">03 / PROJECT STORY</span>
+                                    <span class="story-kicker">03 / CASE STUDY</span>
                                     <button type="button" class="story-back-btn" aria-label="Close story and return to front">
-                                        <span aria-hidden="true">&larr;</span> Back
+                                        &larr; Back
                                     </button>
                                 </div>
                                 <div class="story-content">
                                     <h4 class="story-title">MFA Authenticator</h4>
                                     <p class="story-lead">
-                                        Explores client-side cryptographic primitives and zero-trust authentication without depending on centralized third-party servers.
+                                        An investigation into client-side cryptography and zero-trust authentication mechanisms independent of centralized authentication backends.
                                     </p>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Thinking &amp; Architecture</h5>
+                                        <h5 class="story-heading">Architecture &amp; Thinking</h5>
                                         <p class="story-text">
-                                            Implemented RFC 6238 time-based one-time passwords using the browser's native Web Crypto API for HMAC-SHA256 computations. Local secrets are protected inside an isolated browser vault with constant-time token comparison to mitigate timing attacks.
+                                            Computes TOTP codes in-browser using standard Web Crypto HMAC-SHA256 primitives. Implements constant-time string comparison to defend against timing attacks and stores temporary credentials in memory-only scope.
                                         </p>
                                     </div>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Collaboration &amp; Outcomes</h5>
+                                        <h5 class="story-heading">Security &amp; Outcomes</h5>
                                         <p class="story-text">
-                                            Discussed security implications and threat modeling with peers specializing in network security. Implemented seamless QR code scanning and one-tap clipboard copying with automatic clipboard scrubbing.
+                                            Modeled common network attack surfaces with security peers, implementing automatic clipboard sanitization and accessible QR code generation.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="story-footer">
                                     <a href="https://github.com/ceillavu/ai-mfa-security-system" target="_blank" rel="noopener noreferrer" class="story-cta-live">
-                                        View GitHub Repository &nearr;
+                                        GitHub Repository ↗
                                     </a>
                                 </div>
                             </div>
@@ -427,44 +402,32 @@
                         <div class="story-card">
                             <!-- FRONT -->
                             <div class="story-card-face story-card-front">
-                                <span class="card-tape tape-rose" aria-hidden="true"></span>
                                 <div class="card-banner">
                                     <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" 
                                          alt="Aesthetic skincare bottles, serums, and natural cosmetic products" 
                                          class="banner-img">
-                                    <div class="banner-overlay">
-                                        <div class="banner-top-row">
-                                            <span class="card-pill">Web · In Progress</span>
-                                            <span class="card-year">2026</span>
-                                        </div>
-                                        <div class="banner-bottom-row">
-                                            <div class="banner-icon-badge" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                </svg>
-                                            </div>
-                                            <h3 class="banner-project-title">Skin Bloom</h3>
-                                        </div>
+                                    <div class="banner-badges">
+                                        <span class="card-pill">Web &middot; In Progress</span>
+                                        <span class="card-year">2026</span>
                                     </div>
                                 </div>
                                 <div class="card-body">
+                                    <h3 class="card-title">Skin Bloom</h3>
                                     <h4 class="card-headline">Personalized Skincare Routine &amp; Ingredient Analyzer</h4>
                                     <p class="card-desc">
-                                        An intuitive digital skincare companion matching skin types with active dermatological ingredients, UV index tracking, and progress journals.
+                                        A digital skincare companion analyzing cosmetic ingredient incompatibilities (e.g. retinol vs AHA/BHA conflicts), UV index forecast matching, and skin progress logs.
                                     </p>
                                     <div class="card-tags">
                                         <span class="tag">HTML5</span>
                                         <span class="tag">CSS Grid</span>
                                         <span class="tag">REST API</span>
-                                        <span class="tag">In Progress</span>
+                                        <span class="tag">Active Build</span>
                                     </div>
                                     <div class="card-actions">
-                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read story for Skin Bloom">
-                                            Read Story &rarr;
+                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read case study for Skin Bloom">
+                                            Read Case Study &rarr;
                                         </button>
-                                        <span class="card-status-pill" title="Coming soon, still on it!">
-                                            Coming Soon
-                                        </span>
+                                        <span class="card-status-badge">In Development</span>
                                     </div>
                                 </div>
                             </div>
@@ -472,33 +435,31 @@
                             <!-- BACK / STORY -->
                             <div class="story-card-face story-card-back">
                                 <div class="story-header">
-                                    <span class="story-kicker">04 / PROJECT STORY</span>
+                                    <span class="story-kicker">04 / CASE STUDY</span>
                                     <button type="button" class="story-back-btn" aria-label="Close story and return to front">
-                                        <span aria-hidden="true">&larr;</span> Back
+                                        &larr; Back
                                     </button>
                                 </div>
                                 <div class="story-content">
                                     <h4 class="story-title">Skin Bloom</h4>
                                     <p class="story-lead">
-                                        Designed to demystify complex cosmetic formulations and empower everyday users to build safe, scientifically backed skincare routines.
+                                        Demystifying complex dermatological formulations so everyday consumers can build safe, science-backed personal care routines.
                                     </p>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Thinking &amp; Architecture</h5>
+                                        <h5 class="story-heading">Architecture &amp; Thinking</h5>
                                         <p class="story-text">
-                                            Focusing on an understated editorial UI design, AM/PM routine checklists, and an ingredient conflict matrix that checks for retinoid/AHA-BHA incompatibilities. Utilizes client-side caching to maintain offline journal access.
+                                            Engineered with an editorial, minimalist aesthetic. Features AM/PM routine checklists, ingredient synergy checks, and client-side offline storage for private skin diaries.
                                         </p>
                                     </div>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Collaboration &amp; Status</h5>
+                                        <h5 class="story-heading">Status &amp; Collaboration</h5>
                                         <p class="story-text">
-                                            Currently in active development! Collaborating on cosmetic toxicology datasets and testing component layouts with fellow design enthusiasts.
+                                            Currently validating cosmetic toxicology datasets and iterating UI components based on peer user testing.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="story-footer">
-                                    <span class="story-badge-soon">
-                                        Coming soon, still on it! &sparkles;
-                                    </span>
+                                    <span class="story-badge-soon">Coming soon &middot; Still in active development ✨</span>
                                 </div>
                             </div>
                         </div>
@@ -509,30 +470,20 @@
                         <div class="story-card">
                             <!-- FRONT -->
                             <div class="story-card-face story-card-front">
-                                <span class="card-tape tape-lavender" aria-hidden="true"></span>
                                 <div class="card-banner">
                                     <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
                                          alt="Digital healthcare telemetry and medical data interface" 
                                          class="banner-img">
-                                    <div class="banner-overlay">
-                                        <div class="banner-top-row">
-                                            <span class="card-pill">Applied AI · Prototype</span>
-                                            <span class="card-year">2026</span>
-                                        </div>
-                                        <div class="banner-bottom-row">
-                                            <div class="banner-icon-badge" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                                </svg>
-                                            </div>
-                                            <h3 class="banner-project-title">MindBridge AI Health</h3>
-                                        </div>
+                                    <div class="banner-badges">
+                                        <span class="card-pill">Applied AI &middot; Prototype</span>
+                                        <span class="card-year">2026</span>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-headline">Empathetic Mental Wellness &amp; AI Triage Platform</h4>
+                                    <h3 class="card-title">MindBridge AI Health</h3>
+                                    <h4 class="card-headline">Empathetic Mental Wellness &amp; AI Triage Assistant</h4>
                                     <p class="card-desc">
-                                        MindBridge AI Health is a private, empathetic AI chatbot that offers mental health support. It tracks user mood safely without storing personal data, offers gentle check-ins, and can export summary reports for your doctor. If it detects severe distress, it immediately connects you to emergency help.
+                                        A privacy-first AI companion providing empathetic mental health support, zero-storage mood logging, healthcare summary exports, and automated emergency crisis escalation.
                                     </p>
                                     <div class="card-tags">
                                         <span class="tag">Generative AI</span>
@@ -541,14 +492,14 @@
                                         <span class="tag">Vanilla JS</span>
                                     </div>
                                     <div class="card-actions">
-                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read story for MindBridge AI Health">
-                                            Read Story &rarr;
+                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read case study for MindBridge AI Health">
+                                            Read Case Study &rarr;
                                         </button>
-                                        <a href="https://github.com/ceillavu/mind-bridge" target="_blank" rel="noopener noreferrer" class="card-github-btn" aria-label="View MindBridge on GitHub" title="View GitHub Repository">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                            </svg>
-                                        </a>
+                                        <div class="card-links">
+                                            <a href="https://github.com/ceillavu/mind-bridge" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="GitHub Repository" aria-label="GitHub Repository">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -556,32 +507,32 @@
                             <!-- BACK / STORY -->
                             <div class="story-card-face story-card-back">
                                 <div class="story-header">
-                                    <span class="story-kicker">05 / PROJECT STORY</span>
+                                    <span class="story-kicker">05 / CASE STUDY</span>
                                     <button type="button" class="story-back-btn" aria-label="Close story and return to front">
-                                        <span aria-hidden="true">&larr;</span> Back
+                                        &larr; Back
                                     </button>
                                 </div>
                                 <div class="story-content">
                                     <h4 class="story-title">MindBridge AI Health</h4>
                                     <p class="story-lead">
-                                        A safe, supportive chatbot designed to help people check in on their mental health privately.
+                                        A confidential wellness platform designed to offer students and young adults a secure place to reflect on emotional well-being.
                                     </p>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Thinking &amp; Architecture</h5>
+                                        <h5 class="story-heading">Architecture &amp; Thinking</h5>
                                         <p class="story-text">
-                                            Built with a strong focus on privacy. The chatbot understands tone and mood without saving personal chats or sharing data. If it senses someone is in serious crisis, it immediately connects them to emergency support.
+                                            Adheres to zero-knowledge processing where conversation contexts are ephemeral. Keyword distress heuristics trigger emergency contact resources without third-party data transmission.
                                         </p>
                                     </div>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Collaboration &amp; Outcomes</h5>
+                                        <h5 class="story-heading">Outcomes</h5>
                                         <p class="story-text">
-                                            Worked with peers to create kind, helpful responses based on practical care guidelines. Users can also export a simple mood summary to share with their doctor or counselor.
+                                            Developed structured clinical summary generators that allow users to export formatted PDF reports for counselors or therapists.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="story-footer">
                                     <a href="https://github.com/ceillavu/mind-bridge" target="_blank" rel="noopener noreferrer" class="story-cta-live">
-                                        View GitHub Repository &nearr;
+                                        GitHub Repository ↗
                                     </a>
                                 </div>
                             </div>
@@ -593,47 +544,36 @@
                         <div class="story-card">
                             <!-- FRONT -->
                             <div class="story-card-face story-card-front">
-                                <span class="card-tape tape-amber" aria-hidden="true"></span>
                                 <div class="card-banner">
                                     <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" 
                                          alt="Modern workspace with laptop, coffee, and clean interface design sketches" 
                                          class="banner-img">
-                                    <div class="banner-overlay">
-                                        <div class="banner-top-row">
-                                            <span class="card-pill">Web Standards · Independent</span>
-                                            <span class="card-year">2026</span>
-                                        </div>
-                                        <div class="banner-bottom-row">
-                                            <div class="banner-icon-badge" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <polyline points="16 18 22 12 16 6"></polyline>
-                                                    <polyline points="8 6 2 12 8 18"></polyline>
-                                                </svg>
-                                            </div>
-                                            <h3 class="banner-project-title">Portfolio Story</h3>
-                                        </div>
+                                    <div class="banner-badges">
+                                        <span class="card-pill">Web Standards &middot; Independent</span>
+                                        <span class="card-year">2026</span>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-headline">Designing with AI Collaboration &amp; Clean Web Standards</h4>
+                                    <h3 class="card-title">Portfolio Architecture</h3>
+                                    <h4 class="card-headline">Designing with AI Pairing &amp; Clean Minimalist Standards</h4>
                                     <p class="card-desc">
-                                        An exploratory web engineering story detailing the iterative design and development of this personal portfolio, pairing editorial aesthetics with modern web architecture.
+                                        An iterative web engineering case study exploring human-agent pair programming, minimalist typographic systems, zero-dependency performance, and WCAG accessibility.
                                     </p>
                                     <div class="card-tags">
                                         <span class="tag">HTML5</span>
                                         <span class="tag">CSS Grid</span>
                                         <span class="tag">Modern JS</span>
-                                        <span class="tag">AI Workflows</span>
+                                        <span class="tag">AI Pairing</span>
                                     </div>
                                     <div class="card-actions">
-                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read story for Portfolio Story">
-                                            Read Story &rarr;
+                                        <button type="button" class="read-story-btn" aria-expanded="false" aria-label="Read case study for Portfolio Architecture">
+                                            Read Case Study &rarr;
                                         </button>
-                                        <a href="https://github.com/ceillavu" target="_blank" rel="noopener noreferrer" class="card-github-btn" aria-label="View developer on GitHub" title="View GitHub Profile">
-                                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                            </svg>
-                                        </a>
+                                        <div class="card-links">
+                                            <a href="https://github.com/ceillavu" target="_blank" rel="noopener noreferrer" class="card-icon-link" title="GitHub Profile" aria-label="GitHub Profile">
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -641,32 +581,32 @@
                             <!-- BACK / STORY -->
                             <div class="story-card-face story-card-back">
                                 <div class="story-header">
-                                    <span class="story-kicker">06 / PROJECT STORY</span>
+                                    <span class="story-kicker">06 / CASE STUDY</span>
                                     <button type="button" class="story-back-btn" aria-label="Close story and return to front">
-                                        <span aria-hidden="true">&larr;</span> Back
+                                        &larr; Back
                                     </button>
                                 </div>
                                 <div class="story-content">
                                     <h4 class="story-title">Portfolio Engineering</h4>
                                     <p class="story-lead">
-                                        A practical demonstration of collaborative human-and-AI pair programming, transforming ideas into clean, resilient code without heavy framework overhead.
+                                        A practical demonstration of collaborative human-and-AI pair programming, producing clean, resilient code without heavy framework overhead.
                                     </p>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Thinking &amp; Architecture</h5>
+                                        <h5 class="story-heading">Architecture &amp; Thinking</h5>
                                         <p class="story-text">
-                                            Built with zero framework bloat using semantic HTML5, pure CSS variables for fluid light/dark transitions, and CSS 3D transforms for card interaction. Every detail was audited for WCAG accessibility and responsive stability.
+                                            Built with zero framework bloat using semantic HTML5, pure CSS variables for fluid light/dark transitions, and CSS 3D transforms for card interaction.
                                         </p>
                                     </div>
                                     <div class="story-block">
-                                        <h5 class="story-heading">Collaboration &amp; Outcomes</h5>
+                                        <h5 class="story-heading">Outcomes</h5>
                                         <p class="story-text">
-                                            Iterated through multiple design critiques with agentic pairing to eliminate generic AI patterns, resulting in a distinct, warm editorial identity.
+                                            Refined typography, spacing, and layout inspired by Behance &amp; Wix Studio minimalism, delivering fast load times and clean presentation.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="story-footer">
                                     <a href="https://github.com/ceillavu" target="_blank" rel="noopener noreferrer" class="story-cta-live">
-                                        View GitHub Profile &nearr;
+                                        View GitHub Profile ↗
                                     </a>
                                 </div>
                             </div>
@@ -682,84 +622,116 @@
                         <span class="btn-arrow" aria-hidden="true">&darr;</span>
                     </button>
                 </div>
+
             </div>
         </section>
 
         <!-- ==========================================================================
-             3. ABOUT SECTION (01 / PROLOGUE — The Ethos & Personal Index)
+             3. ABOUT SECTION (Behance Profile & Wix Minimalist Bio)
              ========================================================================== -->
         <section id="about" class="about-section">
             <div class="container about-container">
-                <div class="about-grid-editorial">
+                <div class="about-grid">
                     
-                    <!-- Left Column: Sticky Index & Title -->
-                    <aside class="about-sidebar">
-                        <div class="sidebar-sticky">
-                            <span class="editorial-kicker">01 / PROLOGUE</span>
-                            <h2 class="editorial-title">The <em>Ethos</em></h2>
-                            <p class="sidebar-sub">
-                                From packets to pixels, exploring how technology connects us.
+                    <!-- Left Column: Narrative & Philosophy -->
+                    <div class="about-bio-column">
+                        <span class="section-kicker">02 / ABOUT ME</span>
+                        <h2 class="section-title">Connecting packets to pixels.</h2>
+                        
+                        <p class="bio-lead">
+                            I am a Computer Science undergraduate majoring in Network Computing at the Faculty of Computer Science and Information Technology (FCSIT), Universiti Malaysia Sarawak (UNIMAS).
+                        </p>
+                        
+                        <p class="bio-text">
+                            My technical interest centers on how digital networks operate: routing protocols, secure data transmission, cloud infrastructure, and distributed systems. I believe reliable software starts with robust foundational engineering and finishes with intuitive, understated user interfaces.
+                        </p>
+                        
+                        <p class="bio-text">
+                            Beyond technology, I am passionate about creative media and personal expression. Under the online handle <strong>@cellanotes</strong>, I share lifestyle &amp; reading on TikTok, and makeup &amp; tech shares on Shopee. Fiction reading and mindful yoga help me maintain sharp focus and clear creative thinking.
+                        </p>
+
+                        <div class="personal-quote-box">
+                            <span class="quote-tag">Sales Mindset</span>
+                            <p class="quote-text">
+                                "Anyone that responds to what you say, becomes your potential customer"
                             </p>
+                            <span class="quote-author">&mdash; Aaron Chong (Ultimate Closer)</span>
                         </div>
-                    </aside>
+                    </div>
 
-                    <!-- Right Column: Narrative & Metadata Split -->
-                    <div class="about-main-content">
-                        <div class="about-content-split">
-                            
-                            <!-- Biography Narrative -->
-                            <div class="about-bio-editorial">
-                                <p class="bio-lead">
-                                    I study Computer Science with a specialization in Network Computing at the Faculty of Computer Science and Information Technology (FCSIT), Universiti Malaysia Sarawak (UNIMAS).
-                                </p>
-                                
-                                <p>
-                                    I am interested in how computer networks work, from how data moves between devices to how different systems connect and communicate. I enjoy learning about networking, cloud computing, and software development. I believe good software should work reliably behind the scenes while remaining simple and easy to use.
-                                </p>
-                                
-                                <p>
-                                    Outside of technology, I enjoy reading, creating digital content, and exploring visual design. Under the handle <strong>@cellanotes</strong> on TikTok and Shopee, I share book reviews, study routines, and lifestyle recommendations. Reading and practising yoga also help me stay focused and find balance between my technical work and creative interests.
-                                </p>
+                    <!-- Right Column: Behance-style Bento Spec Matrix -->
+                    <div class="about-matrix-column">
+                        
+                        <!-- Card 1: Academic Background -->
+                        <div class="matrix-card">
+                            <div class="matrix-card-header">
+                                <span class="matrix-num">01</span>
+                                <h3 class="matrix-title">Academic Background</h3>
+                            </div>
+                            <p class="matrix-institution">Universiti Malaysia Sarawak (UNIMAS)</p>
+                            <p class="matrix-degree">Bachelor of Computer Science (Network Computing) with Honors</p>
+                            <div class="matrix-tags">
+                                <span class="spec-tag">FCSIT</span>
+                                <span class="spec-tag">Network Architecture</span>
+                                <span class="spec-tag">Class of 2026</span>
+                            </div>
+                        </div>
 
-                                <!-- Creative Interests (Natural, Lighter Style) -->
-                                <div class="creative-note">
-                                    <span class="creative-label">Personal Pursuits</span>
-                                    <p class="creative-text">
-                                        Escaping into fiction worlds, restorative yoga sesh, study journals and a latte whenever I feel like it.
-                                    </p>
+                        <!-- Card 2: Technical Toolkit -->
+                        <div class="matrix-card">
+                            <div class="matrix-card-header">
+                                <span class="matrix-num">02</span>
+                                <h3 class="matrix-title">Technical Capabilities</h3>
+                            </div>
+                            <div class="matrix-subgroup">
+                                <span class="subgroup-label">Languages &amp; Core</span>
+                                <div class="matrix-tags">
+                                    <span class="spec-tag">Python</span>
+                                    <span class="spec-tag">Java</span>
+                                    <span class="spec-tag">C++</span>
+                                    <span class="spec-tag">JavaScript (ES6+)</span>
+                                    <span class="spec-tag">SQL</span>
                                 </div>
                             </div>
-
-                            <!-- Right Column: Personal Index & Tastes Card -->
-                            <div class="personal-index-card">
-                                <div class="index-card-header">
-                                    <span class="card-kicker">Personal Index &amp; Tastes</span>
-                                </div>
-                                <ul class="index-meta-list">
-                                    <li>
-                                        <span class="meta-label">PRIMARY STACK</span>
-                                        <span class="meta-val">Python, Linux, C++, Java</span>
-                                    </li>
-                                    <li>
-                                        <span class="meta-label">NETWORKING</span>
-                                        <span class="meta-val">Cisco Packet Tracer, MySQL</span>
-                                    </li>
-                                    <li>
-                                        <span class="meta-label">CURRENT BASE</span>
-                                        <span class="meta-val">Sarawak, Malaysia</span>
-                                    </li>
-                                    <li>
-                                        <span class="meta-label">STUDY SOUNDTRACK</span>
-                                        <span class="meta-val font-serif-italic">ambient techno &amp; bossa</span>
-                                    </li>
-                                </ul>
-                                <div class="index-card-footer">
-                                    <span>Bachelor in Computer Science (Network Computing)</span>
-                                    <span class="badge-honors">HONORS</span>
+                            <div class="matrix-subgroup">
+                                <span class="subgroup-label">Networking &amp; Systems</span>
+                                <div class="matrix-tags">
+                                    <span class="spec-tag">Cisco Packet Tracer</span>
+                                    <span class="spec-tag">Linux</span>
+                                    <span class="spec-tag">MySQL</span>
+                                    <span class="spec-tag">WebSockets</span>
+                                    <span class="spec-tag">Cryptography</span>
                                 </div>
                             </div>
-
+                            <div class="matrix-subgroup">
+                                <span class="subgroup-label">Design &amp; Prototyping</span>
+                                <div class="matrix-tags">
+                                    <span class="spec-tag">Figma</span>
+                                    <span class="spec-tag">Git / GitHub</span>
+                                    <span class="spec-tag">Canva</span>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Card 3: Creative & Creator Channel -->
+                        <div class="matrix-card highlight-card">
+                            <div class="matrix-card-header">
+                                <span class="matrix-num">03</span>
+                                <h3 class="matrix-title">Digital Presence</h3>
+                            </div>
+                            <p class="matrix-text">
+                                Creator at <strong>@cellanotes</strong> across TikTok (lifestyle &amp; reading) and Shopee (makeup and tech shares).
+                            </p>
+                            <div class="creator-links-row">
+                                <a href="https://www.tiktok.com/@cellanotes" target="_blank" rel="noopener noreferrer" class="creator-badge-link">
+                                    TikTok &middot; @cellanotes ↗
+                                </a>
+                                <a href="https://shopee.com.my" target="_blank" rel="noopener noreferrer" class="creator-badge-link">
+                                    Shopee Storefront ↗
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -767,42 +739,38 @@
         </section>
 
         <!-- ==========================================================================
-             4. VOLUNTEERING & COMMUNITY (Impact Beyond Code)
+             4. VOLUNTEERING & COMMUNITY (Behance Fieldwork Exhibition)
              ========================================================================== -->
         <section id="volunteering" class="volunteering-section">
             <div class="container">
                 <header class="volunteering-header">
                     <div class="volunteering-header-info">
-                        <span class="section-kicker">02 / COMMUNITY &amp; OUTREACH</span>
-                        <h2 class="section-title">Volunteering, <span class="title-serif">beyond code.</span></h2>
+                        <span class="section-kicker">03 / LEADERSHIP &amp; COMMUNITY</span>
+                        <h2 class="section-title">Volunteering &amp; Outreach</h2>
                         <p class="section-sub">
-                            Activities, mentorship initiatives, and community projects I dedicate time to outside of my academic studies. Giving back to youth education, environmental conservation, and campus life.
+                            Leadership programs, industry immersion, and community initiatives shaping professional growth and civic engagement outside university lecture halls.
                         </p>
                     </div>
                 </header>
 
-                <div class="volunteering-list">
+                <div class="volunteering-grid">
                     
-                    <!-- ==========================================================
-                         VOLUNTEER ACTIVITY 1: APEX AIA Program Excellence
-                         ========================================================== -->
+                    <!-- VOLUNTEER ACTIVITY 1: APEX AIA Program Excellence -->
                     <article class="vol-card">
                         <div class="vol-media">
                             <img src="apex-aia.jpg" 
                                  alt="Marcella and team Zephyron celebrated as Champions at the APEX AIA Program Excellence initiative" 
-                                 class="vol-img apex-img">
+                                 class="vol-img">
+                            <div class="vol-badge-floating">Champion Team</div>
                         </div>
 
                         <div class="vol-body">
                             <div class="vol-meta-row">
                                 <span class="vol-date-text">
-                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    17th August &ndash; 27th August 2026
+                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    17th &ndash; 27th August 2026
                                 </span>
-                                <span class="vol-dot" aria-hidden="true">•</span>
+                                <span class="vol-dot" aria-hidden="true">&bull;</span>
                                 <span class="vol-location">📍 Kuching, Sarawak</span>
                             </div>
                             <h3 class="vol-title">APEX AIA Program Excellence &mdash; Participant</h3>
@@ -814,96 +782,76 @@
                                     <span class="tag">Career Discovery</span>
                                     <span class="tag">Financial Literacy</span>
                                 </div>
-                                <!-- LINKEDIN LINK: Paste your post link here -->
                                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vol-link" aria-label="View activity post on LinkedIn">
-                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
-                                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.76v8.37H6.46V10.9M7.84 6.2a1.62 1.62 0 1 0 1.62 1.62A1.62 1.62 0 0 0 7.84 6.2Z"/>
-                                    </svg>
-                                    View on LinkedIn &nearr;
+                                    LinkedIn ↗
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- ==========================================================
-                         VOLUNTEER ACTIVITY 2: Anak Sarawak Bangkit
-                         ========================================================== -->
+                    <!-- VOLUNTEER ACTIVITY 2: Anak Sarawak Bangkit -->
                     <article class="vol-card">
                         <div class="vol-media">
                             <img src="anak-sarawak-bangkit.jpg" 
-                                 alt="Marcella standing with thumbs up beside the Anak Sarawak Bangkit banner at Legacy Hill Hotel" 
-                                 class="vol-img asb-img">
+                                 alt="Marcella standing beside the Anak Sarawak Bangkit banner at Legacy Hill Hotel" 
+                                 class="vol-img">
+                            <div class="vol-badge-floating">Youth Leadership</div>
                         </div>
 
                         <div class="vol-body">
                             <div class="vol-meta-row">
                                 <span class="vol-date-text">
-                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    2nd Oct &ndash; 4th October 2026
+                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    2nd &ndash; 4th October 2026
                                 </span>
-                                <span class="vol-dot" aria-hidden="true">•</span>
+                                <span class="vol-dot" aria-hidden="true">&bull;</span>
                                 <span class="vol-location">📍 Legacy Hill Hotel</span>
                             </div>
                             <h3 class="vol-title">Anak Sarawak Bangkit Youth Leadership Programme</h3>
                             <p class="vol-desc">
-                                Participated in an intensive youth leadership and community initiative workshop focused on empowering local Sarawakian youth to lead and solve community challenges.
+                                Participated in an intensive youth leadership and community workshop focused on empowering Sarawakian youth to formulate impactful solutions for local civic challenges.
                             </p>
                             <div class="vol-footer">
                                 <div class="vol-tags">
                                     <span class="tag">Youth Leadership</span>
                                     <span class="tag">Community Action</span>
                                 </div>
-                                <!-- LINKEDIN LINK: Paste your post link here -->
                                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vol-link" aria-label="View Anak Sarawak Bangkit post on LinkedIn">
-                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
-                                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.76v8.37H6.46V10.9M7.84 6.2a1.62 1.62 0 1 0 1.62 1.62A1.62 1.62 0 0 0 7.84 6.2Z"/>
-                                    </svg>
-                                    View on LinkedIn &nearr;
+                                    LinkedIn ↗
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- ==========================================================
-                         VOLUNTEER ACTIVITY 3: Industrial Visit to SDEC
-                         ========================================================== -->
+                    <!-- VOLUNTEER ACTIVITY 3: Industrial Visit to SDEC -->
                     <article class="vol-card">
                         <div class="vol-media">
                             <img src="sdec-visit.jpg" 
-                                 alt="Marcella standing beside the Digital Academy sign during the Industrial Visit to SDEC Centre of Excellence in Santubong" 
-                                 class="vol-img sdec-img">
+                                 alt="Marcella beside Digital Academy sign at SDEC Centre of Excellence in Santubong" 
+                                 class="vol-img">
+                            <div class="vol-badge-floating">Industry Immersion</div>
                         </div>
 
                         <div class="vol-body">
                             <div class="vol-meta-row">
                                 <span class="vol-date-text">
-                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                     14th October 2026
                                 </span>
-                                <span class="vol-dot" aria-hidden="true">•</span>
+                                <span class="vol-dot" aria-hidden="true">&bull;</span>
                                 <span class="vol-location">📍 SDEC Centre of Excellence, Santubong</span>
                             </div>
-                            <h3 class="vol-title">Industrial Visit to SDEC!</h3>
+                            <h3 class="vol-title">Industrial Visit to SDEC</h3>
                             <p class="vol-desc">
-                                Participated in the Industrial visit to Sarawak Digital Economy Corporation in Santubong, to understand what they specialize in and projects they are currently working on. Listened to the sharing of alumni FCSIT students and how they manage to secure their positions. Gained insightful knowledge and will apply it during my internship as well. Communication and willing to learn are the top most mentioned during my visit there.
+                                Visited Sarawak Digital Economy Corporation to explore active regional digitization projects. Engaged with FCSIT alumni mentors on workplace readiness, effective team communication, and internship skills.
                             </p>
                             <div class="vol-footer">
                                 <div class="vol-tags">
-                                    <span class="tag">Industry Visit</span>
-                                    <span class="tag">Digital Innovation</span>
+                                    <span class="tag">Digital Economy</span>
+                                    <span class="tag">Alumni Mentorship</span>
                                 </div>
-                                <!-- LINKEDIN LINK: Paste your post link here -->
                                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vol-link" aria-label="View SDEC Industrial Visit post on LinkedIn">
-                                    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
-                                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.76v8.37H6.46V10.9M7.84 6.2a1.62 1.62 0 1 0 1.62 1.62A1.62 1.62 0 0 0 7.84 6.2Z"/>
-                                    </svg>
-                                    View on LinkedIn &nearr;
+                                    LinkedIn ↗
                                 </a>
                             </div>
                         </div>
@@ -914,72 +862,74 @@
         </section>
 
         <!-- ==========================================================================
-             5. CONTACT SECTION (Quiet, High-Contrast Connection)
+             5. CONTACT SECTION (Wix Studio Clean Minimalist Impact)
              ========================================================================== -->
         <section id="contact" class="contact-section">
             <div class="container contact-container">
-                <div class="contact-header">
-                    <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-sub">
-                        I am open to university project collaborations, computing discussions, and creative partnership inquiries.
+                
+                <div class="contact-card-main">
+                    <span class="section-kicker">04 / GET IN TOUCH</span>
+                    <h2 class="contact-headline">Let's connect &amp; collaborate.</h2>
+                    <p class="contact-sub">
+                        I am currently welcoming university research collaborations, internship opportunities, and creative partnerships.
                     </p>
-                </div>
 
-                <div class="contact-content-grid">
-                    <!-- Direct Email Column -->
-                    <div class="contact-col">
-                        <h3 class="contact-col-title">Direct Email</h3>
-                        <p class="contact-col-text">Feel free to send a direct message:</p>
-                        
-                        <a href="mailto:marcellamarkus03@gmail.com" class="direct-email-link">marcellamarkus03@gmail.com</a>
-                        
-                        <div class="contact-actions">
-                            <button type="button" id="copy-email-btn" class="btn btn-outline">Copy Address</button>
-                            <a href="mailto:marcellamarkus03@gmail.com?subject=Portfolio%20Inquiry%20(104863)" class="btn">Send Email ↗</a>
+                    <div class="email-display-box">
+                        <span class="email-text" id="email-address">marcellamarkus03@gmail.com</span>
+                        <div class="email-btn-group">
+                            <button type="button" id="copy-email-btn" class="btn btn-outline" aria-label="Copy email address">
+                                <span id="copy-btn-text">Copy Email</span>
+                            </button>
+                            <a href="mailto:marcellamarkus03@gmail.com?subject=Portfolio%20Inquiry%20(Marcella%20Markus)" class="btn btn-primary">
+                                Send Message ↗
+                            </a>
                         </div>
-
-                        <p class="contact-footnote">
-                            Faculty of Computer Science &amp; Information Technology, UNIMAS<br>
-                            94300 Kota Samarahan, Sarawak, Malaysia
-                        </p>
                     </div>
 
-                    <!-- Channels Column -->
-                    <div class="contact-col">
-                        <h3 class="contact-col-title">Content &amp; Channels</h3>
-                        <p class="contact-col-text">Discover my book journals, lifestyle curation, and creative work:</p>
+                    <div class="contact-channels-grid">
+                        <a href="https://www.tiktok.com/@cellanotes" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-info">
+                                <span class="channel-title">TikTok</span>
+                                <span class="channel-handle">@cellanotes</span>
+                                <span class="channel-meta">Lifestyle &amp; reading</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
 
-                        <ul class="channel-links">
-                            <li>
-                                <a href="https://www.tiktok.com/@cellanotes" target="_blank" rel="noopener noreferrer" class="channel-link-item">
-                                    <div class="channel-link-main">
-                                        <span class="channel-name">TikTok</span>
-                                        <span class="channel-desc">@cellanotes · Book reviews, study journals &amp; creative videos</span>
-                                    </div>
-                                    <span class="channel-link-arrow">↗</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://shopee.com.my" target="_blank" rel="noopener noreferrer" class="channel-link-item">
-                                    <div class="channel-link-main">
-                                        <span class="channel-name">Shopee</span>
-                                        <span class="channel-desc">Creator Storefront · Curated stationery &amp; lifestyle recommendations</span>
-                                    </div>
-                                    <span class="channel-link-arrow">↗</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="channel-link-item">
-                                    <div class="channel-link-main">
-                                        <span class="channel-name">YouTube</span>
-                                        <span class="channel-desc">Video Channel · Lifestyle vlogs, reading logs &amp; tech reflections</span>
-                                    </div>
-                                    <span class="channel-link-arrow">↗</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="https://shopee.com.my" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-info">
+                                <span class="channel-title">Shopee Storefront</span>
+                                <span class="channel-handle">Creator Shop</span>
+                                <span class="channel-meta">Makeup and Tech shares</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+
+                        <a href="https://github.com/ceillavu" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-info">
+                                <span class="channel-title">GitHub</span>
+                                <span class="channel-handle">@ceillavu</span>
+                                <span class="channel-meta">Repositories, prototypes &amp; code</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="channel-card">
+                            <div class="channel-info">
+                                <span class="channel-title">LinkedIn</span>
+                                <span class="channel-handle">Marcella Markus</span>
+                                <span class="channel-meta">Professional network &amp; updates</span>
+                            </div>
+                            <span class="channel-arrow">↗</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-footer-note">
+                        <p>Faculty of Computer Science &amp; Information Technology, Universiti Malaysia Sarawak</p>
+                        <p>94300 Kota Samarahan, Sarawak, Malaysia</p>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -992,7 +942,7 @@
             <h3 id="modal-title" class="modal-title">Title</h3>
             <p id="modal-tech" class="modal-tech">Tech</p>
             <p id="modal-desc" class="modal-desc">Description</p>
-            <button type="button" class="btn" id="modal-ok-btn">Close</button>
+            <button type="button" class="btn btn-primary" id="modal-ok-btn">Close</button>
         </div>
     </div>
 
@@ -1002,8 +952,13 @@
     <!-- Clean Monograph Footer -->
     <footer class="site-footer">
         <div class="container footer-content">
-            <p class="footer-copy">Marcella Markus 2026</p>
-            <p class="footer-contact">Inquiries: <a href="mailto:marcellamarkus03@gmail.com">marcellamarkus03@gmail.com</a></p>
+            <div class="footer-left">
+                <span class="footer-name">Marcella Markus &middot; 2026</span>
+                <span class="footer-desc">Network Computing &amp; Digital Creator</span>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="footer-link">Back to Top &uarr;</a>
+            </div>
         </div>
     </footer>
 
