@@ -1066,39 +1066,101 @@ body.dark-mode .site-header {
 
 .matrix-card-header {
     display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.matrix-kicker-row {
+    display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .matrix-num {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--text-muted);
 }
 
+.matrix-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--bg-subtle);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
 .matrix-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-primary);
+    margin: 0;
+}
+
+/* Card 1: Education items */
+.matrix-edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.matrix-edu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .matrix-institution {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--text-primary);
+    margin: 0;
 }
 
 .matrix-degree {
-    font-size: 0.85rem;
+    font-size: 0.825rem;
+    font-weight: 600;
     color: var(--text-secondary);
-    margin-bottom: 14px;
+    margin: 0;
+}
+
+.matrix-faculty {
+    font-size: 0.775rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.matrix-meta-timeline {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+.matrix-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    width: 100%;
+    margin: 2px 0;
+}
+
+/* Card 2: Skills */
+.matrix-skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .matrix-subgroup {
-    margin-bottom: 14px;
-}
-.matrix-subgroup:last-child {
     margin-bottom: 0;
 }
 
@@ -1128,11 +1190,27 @@ body.dark-mode .site-header {
     border: 1px solid var(--border-color);
 }
 
+/* Card 3: Digital Presence */
 .matrix-text {
     font-size: 0.875rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+}
+
+.matrix-handle-row {
+    margin-bottom: 14px;
+}
+
+.matrix-handle-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    background-color: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
 }
 
 .creator-links-row {
