@@ -757,7 +757,7 @@
                     
                     <!-- VOLUNTEER ACTIVITY 1: APEX AIA Program Excellence -->
                     <article class="vol-card">
-                        <div class="vol-media">
+                        <div class="vol-media" data-blog-target="blog-apex" style="cursor: pointer;" title="Read blog post">
                             <img src="apex-aia.jpg" 
                                  alt="Marcella and team Zephyron celebrated as Champions at the APEX AIA Program Excellence initiative" 
                                  class="vol-img">
@@ -772,8 +772,10 @@
                                 </span>
                                 <span class="vol-dot" aria-hidden="true">&bull;</span>
                                 <span class="vol-location">📍 Kuching, Sarawak</span>
+                                <span class="vol-dot" aria-hidden="true">&bull;</span>
+                                <span class="vol-read-pill">4 min read</span>
                             </div>
-                            <h3 class="vol-title">APEX AIA Program Excellence &mdash; Participant</h3>
+                            <h3 class="vol-title" data-blog-target="blog-apex" style="cursor: pointer;" title="Read blog post">APEX AIA Program Excellence &mdash; Participant</h3>
                             <p class="vol-desc">
                                 Participated in a 1-week career discovery and leadership initiative by AIA, focusing on financial literacy, gamified experiential learning, and essential workforce readiness skills.
                             </p>
@@ -782,16 +784,16 @@
                                     <span class="tag">Career Discovery</span>
                                     <span class="tag">Financial Literacy</span>
                                 </div>
-                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vol-link" aria-label="View activity post on LinkedIn">
-                                    LinkedIn ↗
-                                </a>
+                                <button type="button" class="vol-blog-btn" data-blog-target="blog-apex" aria-label="Read full blog post for APEX AIA Program Excellence">
+                                    Read Article &rarr;
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <!-- VOLUNTEER ACTIVITY 2: Anak Sarawak Bangkit -->
                     <article class="vol-card">
-                        <div class="vol-media">
+                        <div class="vol-media" data-blog-target="blog-asb" style="cursor: pointer;" title="Read blog post">
                             <img src="anak-sarawak-bangkit.jpg" 
                                  alt="Marcella standing beside the Anak Sarawak Bangkit banner at Legacy Hill Hotel" 
                                  class="vol-img">
@@ -806,8 +808,10 @@
                                 </span>
                                 <span class="vol-dot" aria-hidden="true">&bull;</span>
                                 <span class="vol-location">📍 Legacy Hill Hotel</span>
+                                <span class="vol-dot" aria-hidden="true">&bull;</span>
+                                <span class="vol-read-pill">3 min read</span>
                             </div>
-                            <h3 class="vol-title">Anak Sarawak Bangkit Youth Leadership Programme</h3>
+                            <h3 class="vol-title" data-blog-target="blog-asb" style="cursor: pointer;" title="Read blog post">Anak Sarawak Bangkit Youth Leadership Programme</h3>
                             <p class="vol-desc">
                                 Participated in an intensive youth leadership and community workshop focused on empowering Sarawakian youth to formulate impactful solutions for local civic challenges.
                             </p>
@@ -816,16 +820,16 @@
                                     <span class="tag">Youth Leadership</span>
                                     <span class="tag">Community Action</span>
                                 </div>
-                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vol-link" aria-label="View Anak Sarawak Bangkit post on LinkedIn">
-                                    LinkedIn ↗
-                                </a>
+                                <button type="button" class="vol-blog-btn" data-blog-target="blog-asb" aria-label="Read full blog post for Anak Sarawak Bangkit">
+                                    Read Article &rarr;
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <!-- VOLUNTEER ACTIVITY 3: Industrial Visit to SDEC -->
                     <article class="vol-card">
-                        <div class="vol-media">
+                        <div class="vol-media" data-blog-target="blog-sdec" style="cursor: pointer;" title="Read blog post">
                             <img src="sdec-visit.jpg" 
                                  alt="Marcella beside Digital Academy sign at SDEC Centre of Excellence in Santubong" 
                                  class="vol-img">
@@ -840,19 +844,21 @@
                                 </span>
                                 <span class="vol-dot" aria-hidden="true">&bull;</span>
                                 <span class="vol-location">📍 SDEC Centre of Excellence, Santubong</span>
+                                <span class="vol-dot" aria-hidden="true">&bull;</span>
+                                <span class="vol-read-pill">4 min read</span>
                             </div>
-                            <h3 class="vol-title">Industrial Visit to SDEC</h3>
+                            <h3 class="vol-title" data-blog-target="blog-sdec" style="cursor: pointer;" title="Read blog post">Industrial Visit to SDEC Centre of Excellence</h3>
                             <p class="vol-desc">
-                                Visited Sarawak Digital Economy Corporation to explore active regional digitization projects. Engaged with FCSIT alumni mentors on workplace readiness, effective team communication, and internship skills.
+                                Visited Sarawak Digital Economy Corporation to explore active regional digitization projects and gain career mentorship from FCSIT alumni seniors on workplace readiness.
                             </p>
                             <div class="vol-footer">
                                 <div class="vol-tags">
                                     <span class="tag">Digital Economy</span>
                                     <span class="tag">Alumni Mentorship</span>
                                 </div>
-                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="vol-link" aria-label="View SDEC Industrial Visit post on LinkedIn">
-                                    LinkedIn ↗
-                                </a>
+                                <button type="button" class="vol-blog-btn" data-blog-target="blog-sdec" aria-label="Read full blog post for Industrial Visit to SDEC">
+                                    Read Article &rarr;
+                                </button>
                             </div>
                         </div>
                     </article>
@@ -943,6 +949,271 @@
             <p id="modal-tech" class="modal-tech">Tech</p>
             <p id="modal-desc" class="modal-desc">Description</p>
             <button type="button" class="btn btn-primary" id="modal-ok-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MEDIUM-STYLE BLOG READER MODAL
+         Allows writing rich articles, adding reflections, and attaching photos!
+         ========================================================================== -->
+    <div class="blog-modal-backdrop" id="blog-modal" role="dialog" aria-modal="true" aria-label="Personal Blog Reader" aria-hidden="true">
+        <div class="blog-modal-container">
+            
+            <!-- Sticky Reader Top Navigation -->
+            <div class="blog-reader-nav">
+                <button type="button" class="blog-nav-btn blog-close-btn" id="blog-close-btn" aria-label="Back to portfolio">
+                    <span aria-hidden="true">&larr;</span> Back to Portfolio
+                </button>
+                <div class="blog-reader-meta-top">
+                    <span class="blog-author-mini">Marcella Markus &middot; Fieldwork &amp; Stories</span>
+                </div>
+                <button type="button" class="blog-nav-btn-icon blog-close-btn" aria-label="Close reader">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Articles Collection -->
+            <div class="blog-articles-wrapper">
+
+                <!-- ==========================================================
+                     BLOG ARTICLE 1: APEX AIA Program Excellence
+                     ========================================================== -->
+                <article class="blog-article" id="blog-apex" hidden>
+                    <header class="blog-header">
+                        <span class="blog-category-pill">Career Discovery &amp; Leadership</span>
+                        <h1 class="blog-title">From Career Discovery to Champions: My Experience at APEX AIA</h1>
+                        <p class="blog-subtitle">
+                            Reflecting on an intensive week of experiential learning, gamified wealth simulations, and bringing home the championship with Team Zephyron in Kuching.
+                        </p>
+                        
+                        <div class="blog-author-row">
+                            <img src="logo.png" alt="Marcella Markus" class="blog-author-avatar">
+                            <div class="blog-author-info">
+                                <span class="blog-author-name">Marcella Markus</span>
+                                <span class="blog-meta-sub">17th &ndash; 27th August 2026 &middot; 4 min read &middot; Kuching, Sarawak</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Primary Hero Figure -->
+                    <figure class="blog-figure">
+                        <img src="apex-aia.jpg" alt="Marcella and team Zephyron celebrated as Champions at the APEX AIA Program Excellence initiative" class="blog-img">
+                        <figcaption>Team Zephyron celebrated as Champions at the AIA APEX Program Excellence initiative in Kuching.</figcaption>
+                    </figure>
+
+                    <!-- Article Body -->
+                    <div class="blog-body">
+                        <p>
+                            Stepping outside the university lecture hall and into the AIA APEX Program Excellence in Kuching was an eye-opening journey. Designed to simulate real-world industry demands, the program pushed our team to think critically about financial literacy, modern leadership, and strategic decision-making.
+                        </p>
+
+                        <h3>Gamified Learning &amp; Real-World Economics</h3>
+                        <p>
+                            Instead of standard lecture slides, the program immersed us in experiential simulations. We navigated realistic market dynamics, personal and corporate budgeting, and calculated risk assessments. The gamified approach made complex financial principles tangible and showed how smart planning translates into lasting resilience.
+                        </p>
+
+                        <blockquote>
+                            &ldquo;True leadership isn't about speaking the loudest; it's about creating an environment where everyone can channel their strengths toward a shared goal.&rdquo;
+                        </blockquote>
+
+                        <h3>Leading &amp; Collaborating with Team Zephyron</h3>
+                        <p>
+                            I had the privilege of working alongside enthusiastic peers in Team Zephyron. Throughout the week, we tackled fast-paced team challenges, case pitches, and rapid problem-solving drills. Working under strict deadlines taught us how to delegate effectively, communicate without ambiguity, and keep our collective morale high.
+                        </p>
+                        <p>
+                            Being named Champions was an incredible honor and a testament to what empathetic, coordinated teamwork can achieve.
+                        </p>
+
+                        <!-- =================================================================
+                             📷 PHOTO ATTACHMENT GALLERY:
+                             You can easily attach more photos below! Simply duplicate the figure block:
+                             <figure class="blog-figure-sm"><img src="your-photo.jpg"><figcaption>Caption</figcaption></figure>
+                             ================================================================= -->
+                        <div class="blog-photo-grid">
+                            <figure class="blog-figure-sm">
+                                <img src="apex-aia.jpg" alt="APEX AIA Team Zephyron presentation" class="blog-img">
+                                <figcaption>Final case study presentation and award ceremony in Kuching.</figcaption>
+                            </figure>
+                        </div>
+
+                        <h3>Key Takeaways for My Tech Career</h3>
+                        <p>
+                            Although this was a leadership and financial initiative, the lessons directly benefit my journey in Network Computing. Whether architecting network infrastructure or pitching project solutions, active listening, user-centric thinking, and clear communication are the true differentiators.
+                        </p>
+
+                        <div class="blog-tags-footer">
+                            <span class="tag">Career Discovery</span>
+                            <span class="tag">Financial Literacy</span>
+                            <span class="tag">Team Leadership</span>
+                            <span class="tag">AIA Malaysia</span>
+                            <span class="tag">Kuching</span>
+                        </div>
+
+                        <div class="blog-article-footer-actions">
+                            <button type="button" class="btn btn-outline blog-close-btn">Close Article</button>
+                            <a href="#hero" class="footer-link blog-close-btn">Back to Portfolio &uarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     BLOG ARTICLE 2: Anak Sarawak Bangkit
+                     ========================================================== -->
+                <article class="blog-article" id="blog-asb" hidden>
+                    <header class="blog-header">
+                        <span class="blog-category-pill">Youth Leadership &amp; Community</span>
+                        <h1 class="blog-title">Anak Sarawak Bangkit: Empowering the Next Generation of Local Leaders</h1>
+                        <p class="blog-subtitle">
+                            Three transformative days at Legacy Hill Hotel developing civic initiatives, grassroots solutions, and leadership resilience for Sarawak.
+                        </p>
+                        
+                        <div class="blog-author-row">
+                            <img src="logo.png" alt="Marcella Markus" class="blog-author-avatar">
+                            <div class="blog-author-info">
+                                <span class="blog-author-name">Marcella Markus</span>
+                                <span class="blog-meta-sub">2nd &ndash; 4th October 2026 &middot; 3 min read &middot; Legacy Hill Hotel</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Primary Hero Figure -->
+                    <figure class="blog-figure">
+                        <img src="anak-sarawak-bangkit.jpg" alt="Marcella standing beside the Anak Sarawak Bangkit banner at Legacy Hill Hotel" class="blog-img">
+                        <figcaption>Representing our youth delegation at Legacy Hill Hotel during the Anak Sarawak Bangkit leadership workshop.</figcaption>
+                    </figure>
+
+                    <!-- Article Body -->
+                    <div class="blog-body">
+                        <p>
+                            Youth empowerment in Sarawak is not just an ideal—it is an active civic responsibility. Participating in the Anak Sarawak Bangkit Youth Leadership Programme brought together passionate young minds from across the state to discuss real community issues and develop grassroots solutions.
+                        </p>
+
+                        <h3>Grassroots Problem Solving &amp; Community Action</h3>
+                        <p>
+                            Over the three days at Legacy Hill Hotel, our sessions focused on breaking down complex community challenges into actionable micro-initiatives. We examined youth education, digital literacy in rural districts, and sustainable community development.
+                        </p>
+
+                        <blockquote>
+                            &ldquo;When young people are given the platform and tools to lead, community solutions become authentic, sustainable, and impactful.&rdquo;
+                        </blockquote>
+
+                        <h3>Finding My Voice in Public Advocacy</h3>
+                        <p>
+                            The workshop pushed each of us out of our comfort zones. Through speech workshops, strategy presentations, and constructive critique sessions, I gained tremendous confidence in articulating technical and social ideas clearly to diverse audiences.
+                        </p>
+
+                        <!-- =================================================================
+                             📷 PHOTO ATTACHMENT GALLERY:
+                             Attach more workshop, team, or certificate photos here!
+                             ================================================================= -->
+                        <div class="blog-photo-grid">
+                            <figure class="blog-figure-sm">
+                                <img src="anak-sarawak-bangkit.jpg" alt="Anak Sarawak Bangkit banner" class="blog-img">
+                                <figcaption>Hands-on strategy and breakout discussions with fellow participants.</figcaption>
+                            </figure>
+                        </div>
+
+                        <h3>Personal Reflections</h3>
+                        <p>
+                            This experience reminded me that as computing students, our technical skills are most valuable when paired with social responsibility. Building inclusive networks, safe software, and digital access starts with understanding the communities we build for.
+                        </p>
+
+                        <div class="blog-tags-footer">
+                            <span class="tag">Youth Leadership</span>
+                            <span class="tag">Community Action</span>
+                            <span class="tag">Sarawak Youth</span>
+                            <span class="tag">Civic Engagement</span>
+                        </div>
+
+                        <div class="blog-article-footer-actions">
+                            <button type="button" class="btn btn-outline blog-close-btn">Close Article</button>
+                            <a href="#hero" class="footer-link blog-close-btn">Back to Portfolio &uarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     BLOG ARTICLE 3: Industrial Visit to SDEC
+                     ========================================================== -->
+                <article class="blog-article" id="blog-sdec" hidden>
+                    <header class="blog-header">
+                        <span class="blog-category-pill">Digital Economy &amp; Tech Immersion</span>
+                        <h1 class="blog-title">Inside Sarawak's Digital Transformation: A Day at SDEC Santubong</h1>
+                        <p class="blog-subtitle">
+                            Exploring regional innovation, digital economy infrastructure, and invaluable career guidance from FCSIT alumni mentors.
+                        </p>
+                        
+                        <div class="blog-author-row">
+                            <img src="logo.png" alt="Marcella Markus" class="blog-author-avatar">
+                            <div class="blog-author-info">
+                                <span class="blog-author-name">Marcella Markus</span>
+                                <span class="blog-meta-sub">14th October 2026 &middot; 4 min read &middot; SDEC Centre of Excellence, Santubong</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Primary Hero Figure -->
+                    <figure class="blog-figure">
+                        <img src="sdec-visit.jpg" alt="Marcella beside Digital Academy sign at SDEC Centre of Excellence in Santubong" class="blog-img">
+                        <figcaption>Outside the Digital Academy sign during our industrial visit to SDEC Centre of Excellence in Santubong.</figcaption>
+                    </figure>
+
+                    <!-- Article Body -->
+                    <div class="blog-body">
+                        <p>
+                            Visiting the Sarawak Digital Economy Corporation (SDEC) Centre of Excellence in Santubong provided an inspiring look at the intersection between university computing curricula and production-scale regional systems.
+                        </p>
+
+                        <h3>Understanding the Regional Digital Landscape</h3>
+                        <p>
+                            We were introduced to SDEC’s ongoing initiatives across Sarawak: expanding smart infrastructure, supporting local tech startups, and accelerating digital talent development. Seeing actual data pipelines, connectivity testbeds, and digital academy programs in action made our network computing coursework feel immediately relevant.
+                        </p>
+
+                        <blockquote>
+                            &ldquo;Technical knowledge gets you through the door, but clear communication and a relentless willingness to learn determine how far you grow.&rdquo;
+                        </blockquote>
+
+                        <h3>FCSIT Alumni Sharing: Navigating the Industry Jump</h3>
+                        <p>
+                            One of the highlights was listening to FCSIT alumni who now work at SDEC. They shared transparent insights about transitioning from academic assignments to high-stakes enterprise projects. Their top advice centered on two fundamentals:
+                        </p>
+                        <ul>
+                            <li><strong>Proactive Communication:</strong> Never hesitate to ask clarifying questions early when requirements are vague.</li>
+                            <li><strong>Continuous Curiosity:</strong> Technologies and protocols evolve rapidly; staying adaptable is essential.</li>
+                        </ul>
+
+                        <!-- =================================================================
+                             📷 PHOTO ATTACHMENT GALLERY:
+                             Attach more tour photos, group pictures, or exhibition shots here!
+                             ================================================================= -->
+                        <div class="blog-photo-grid">
+                            <figure class="blog-figure-sm">
+                                <img src="sdec-visit.jpg" alt="SDEC Centre of Excellence tour" class="blog-img">
+                                <figcaption>Touring the Digital Academy and Centre of Excellence facilities in Santubong.</figcaption>
+                            </figure>
+                        </div>
+
+                        <h3>Preparing for My Industrial Training</h3>
+                        <p>
+                            This visit solidified my goals for my upcoming industrial training. It reinforced that success in computer networking requires both solid command of protocols and the soft skills to communicate ideas with diverse stakeholders.
+                        </p>
+
+                        <div class="blog-tags-footer">
+                            <span class="tag">Digital Economy</span>
+                            <span class="tag">Industry Visit</span>
+                            <span class="tag">SDEC</span>
+                            <span class="tag">FCSIT Alumni</span>
+                            <span class="tag">Tech Mentorship</span>
+                        </div>
+
+                        <div class="blog-article-footer-actions">
+                            <button type="button" class="btn btn-outline blog-close-btn">Close Article</button>
+                            <a href="#hero" class="footer-link blog-close-btn">Back to Portfolio &uarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </div>
     </div>
 

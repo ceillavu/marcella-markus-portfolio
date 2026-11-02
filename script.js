@@ -249,6 +249,70 @@
         });
     }
 
+    /* 8. Medium-Style Blog Article Reader Modal */
+    function initBlogModal() {
+        const modal = document.getElementById("blog-modal");
+        if (!modal) return;
+        const openBtns = document.querySelectorAll(".vol-blog-btn, [data-blog-target]");
+        const closeBtns = modal.querySelectorAll(".blog-close-btn");
+        const articles = modal.querySelectorAll(".blog-article");
+        let lastFocus = null;
+
+        function openBlog(targetId) {
+            let found = false;
+            articles.forEach(art => {
+                if (art.id === targetId) {
+                    art.removeAttribute("hidden");
+                    found = true;
+                } else {
+                    art.setAttribute("hidden", "");
+                }
+            });
+            if (!found) return;
+
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open");
+
+            // Reset scroll position to top of article
+            const container = modal.querySelector(".blog-modal-container");
+            if (container) container.scrollTop = 0;
+
+            const firstClose = modal.querySelector(".blog-close-btn");
+            if (firstClose) firstClose.focus();
+        }
+
+        function closeBlog() {
+            modal.classList.remove("open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+            if (lastFocus) lastFocus.focus();
+        }
+
+        openBtns.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                lastFocus = btn;
+                const targetId = btn.getAttribute("data-blog-target");
+                if (targetId) openBlog(targetId);
+            });
+        });
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", closeBlog);
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeBlog();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal.classList.contains("open")) {
+                closeBlog();
+            }
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
         initTheme();
         initMobileNav();
@@ -257,5 +321,6 @@
         initModal();
         initScroll();
         initCopy();
+        initBlogModal();
     });
 })();
