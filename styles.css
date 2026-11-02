@@ -987,6 +987,7 @@ body.dark-mode .site-header {
 .about-bio-column {
     display: flex;
     flex-direction: column;
+    max-width: 780px;
 }
 
 .bio-lead {
